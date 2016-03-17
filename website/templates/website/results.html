@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ question.question_text }} results</h1>
+
+
+{% for vote_name, vote_values in votes.items %}
+<ul>
+    <li>{{ vote_name }}:
+      <ul>
+        {% for vote in vote_values %}
+          <li>{{ vote.quantity }} for {{ vote.user.username }}</li>
+        {% endfor %}
+      </ul>
+    </li>
+</ul>
+{% endfor %}
+
+
+<a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+{% endblock %}

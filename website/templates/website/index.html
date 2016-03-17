@@ -1,0 +1,251 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+      <!-- CONTENT -->
+      <div class="cursor_l cursor_white cursor_left" id="content">
+        <div style="padding-bottom: 0px;" class="container clearfix">
+          <a class="ie-next"></a>
+          <a class="ie-prev"></a>
+
+          <!-- ASSETS : START -->
+          <div class="assets size_700" style="width: 18402px;">
+          <div style="width: 36804px;" id="assets_wrap">
+
+
+            {% for image in images %}
+                  <div class="asset image">
+                    <div class="wrap">
+                      <div class="img">
+                        {% load staticfiles %}
+                        <img lazyloaded="true" src="{{ image.get_display_url }}" alt="" data-aspect-ratio="595:900">
+                      </div>
+                    </div>
+                  </div>
+            {% endfor %}
+
+
+
+          </div>
+          <!-- ASSETS : END -->
+        </div>
+        </div>
+      </div>
+      <!-- CONTENT END -->
+
+    </div>
+
+<!-- -->
+
+
+
+
+
+
+  <style type="text/css">
+    b, strong { font-weight: bold; }
+    i, em { font-style: italic; }
+    html body #using {
+      height: auto!important;
+      left: auto!important;
+      line-height: 1!important;
+      margin: 0!important;
+      opacity: 1!important;
+      padding: 0!important;
+      position: fixed!important;
+      text-indent: 0!important;
+      top: auto!important;
+      visibility: visible!important;
+      width: auto!important;
+      z-index: 2147483647!important;
+      -webkit-transform: none!important;
+      -moz-transform: none!important;
+      -ms-transform: none!important;
+      -o-transform: none!important;
+      transform: none!important;
+
+        color: #666666!important;
+
+      font-size: 10px;
+      font-family: verdana, Arial, sans-serif!important;
+      display:block!important;
+
+
+          bottom: 10px!important;
+
+
+
+
+          right: 10px!important;
+
+
+      word-spacing: 0px!important;
+    }
+    html body #using::before,
+    html body #using::after {
+      display: none!important;
+    }
+    #using a {
+      opacity: 1!important;
+      z-index: 2147483647!important;
+      display:inline!important;
+      position:static!important;
+      text-decoration: underline!important;
+
+        color: #666666!important;
+
+    }
+    #using a:hover {
+      color:red!important;
+      text-decoration: underline!important;
+    }
+  </style>
+
+
+<style type="text/css">
+  /* Image Protection */
+  #image_protection_notice {
+    color: #000;
+    padding: 8px 8px;
+    width: 200px;
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 0 5px #222;
+    -webkit-box-shadow: 0 0 5px #222;
+    -moz-box-shadow: 0 0 5px #222;
+    box-shadow: 0 0 5px #222
+  }
+</style>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+
+    _gaq.push(['_setAccount', 'UA-11743039-2']);
+
+
+      _gaq.push(['_setCustomVar', 1, 'theme_name', 'Horizon Left', 3]);
+      _gaq.push(['_setCustomVar', 2, 'theme_version', '67', 3]);
+      _gaq.push(['_setCustomVar', 3, 'profession', '933', 3]);
+      _gaq.push(['_setCustomVar', 4, 'country_identifier', '886', 3]);
+
+    _gaq.push(['_trackPageview']);
+
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<script type="text/javascript">
+  //<![CDATA[
+  //]]>
+</script>
+
+<script src="https://static0.format-assets.com/static/theme_api/v1/4ormat-b2a281bf412c1e982414a3bb51f2ece8ff436bf93c673c10f048fe739b61c361.js" type="text/javascript"></script>
+
+
+
+
+
+
+
+
+
+
+<!-- -->
+
+
+
+
+
+
+
+
+
+
+
+{#	<div id="demo">#}
+{#		<section id="examples" class="snap-scrolling-example">#}
+{##}
+{#			<!-- content -->#}
+{#			<div id="content-1" class="content horizontal-images">#}
+{#				<ul>#}
+{#					<li>{% load staticfiles %}<img src="{% static 'website/images/img1.jpg' %}"/></li>#}
+{#					<li>{% load staticfiles %}<img src="{% static 'website/images/img2.jpg' %}"/></li>#}
+{#					<li>{% load staticfiles %}<img src="{% static 'website/images/img3.jpg' %}"/></li>#}
+{#					<li>{% load staticfiles %}<img src="{% static 'website/images/img4.jpg' %}"/></li>#}
+{#					<li>{% load staticfiles %}<img src="{% static 'website/images/img5.jpg' %}"/></li>#}
+{#					<li>{% load staticfiles %}<img src="{% static 'website/images/img6.jpg' %}"/></li>#}
+{#					<li>{% load staticfiles %}<img src="{% static 'website/images/img7.jpg' %}"/></li>#}
+{#					<li>{% load staticfiles %}<img src="{% static 'website/images/img1.jpg' %}"/></li>#}
+{#					<li>{% load staticfiles %}<img src="{% static 'website/images/img2.jpg' %}"/></li>#}
+{#					<li>{% load staticfiles %}<img src="{% static 'website/images/img3.jpg' %}"/></li>#}
+{#					<li>{% load staticfiles %}<img src="{% static 'website/images/img4.jpg' %}"/></li>#}
+{#					<li>{% load staticfiles %}<img src="{% static 'website/images/img5.jpg' %}"/></li>#}
+{#					<li>{% load staticfiles %}<img src="{% static 'website/images/img6.jpg' %}"/></li>#}
+{#					<li>{% load staticfiles %}<img src="{% static 'website/images/img7.jpg' %}"/></li>#}
+{#				</ul>#}
+{#			</div>#}
+{##}
+{#		</section>#}
+{#	</div>#}
+{% load staticfiles %}
+{#<script src="{% static 'website/js/jquery.easying.1.3.js' %}"></script>#}
+{#  <script>#}
+{#  $(function() {#}
+{#	$('ul.nav a').bind('click',function(event){#}
+{#		var $anchor = $(this);#}
+{#		/*#}
+{#		if you want to use one of the easing effects:#}
+{#		$('html, body').stop().animate({#}
+{#			scrollLeft: $($anchor.attr('href')).offset().left#}
+{#		}, 1500,'easeInOutExpo');#}
+{#		 */#}
+{#		$('html, body').stop().animate({#}
+{#			scrollLeft: $($anchor.attr('href')).offset().left#}
+{#		}, 1000);#}
+{#		event.preventDefault();#}
+{#	});#}
+{#});#}
+
+  <!--</script>-->
+  {% load staticfiles %}
+  <script src="{% static 'website/js/jquery.scrollpane.js' %}"></script>
+
+<!--	<script>
+		(function($){
+			$(window).load(function(){
+
+				/*
+				get snap amount programmatically or just set it directly (e.g. "273")
+				in this example, the snap amount is list item's (li) outer-width (width+margins)
+				*/
+				var amount=Math.max.apply(Math,$("#content-1 li").map(function(){return $(this).outerWidth(true);}).get());
+
+				$("#content-1").mCustomScrollbar({
+					axis:"x",
+					theme:"inset",
+					advanced:{
+						autoExpandHorizontalScroll:true
+					},
+					scrollButtons:{
+						enable:true,
+						scrollType:"stepped"
+					},
+					keyboard:{scrollType:"stepped"},
+					snapAmount:amount,
+					mouseWheel:{scrollAmount:amount}
+				});
+
+			});
+		})(jQuery);
+	</script>-->
+
+{% endblock %}
