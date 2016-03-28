@@ -70,16 +70,14 @@
 
     <div style="height:700px;" class="menu_wrap">
       <ul class="main_nav">
-            <li class="item selected"><a href="/wedding">Mariages</a></li>
-            <li class="item "><a href="/portrait">Portrait</a></li>
-            <li class="item "><a href="/newborn">Nouveaux-nés</a></li>
-            <li class="item "><a href="/press">Presse</a></li>
+            <li class="item {% if request.resolver_match.url_name == "index" %}selected{% endif %}"><a href="{% url "index" %}">Mariages</a></li>
+            <li class="item {% if request.resolver_match.url_name == "portrait" %}selected{% endif %} "><a href="{% url "portrait" %}">Portrait</a></li>
+            <li class="item {% if request.resolver_match.url_name == "newborn" %}selected{% endif %}  "><a href="{% url "newborn" %}">Nouveaux-nés</a></li>
+            <li class="item {% if request.resolver_match.url_name == "press" %}selected{% endif %}  "><a href="{% url "press" %}">Presse</a></li>
 
-            <li class="item " style="padding-top: 10px;"><a href="/video">Vidéos</a></li>
-            <!--<li class="item "><a href="/editorial">Editorial</a></li>
-            <li class="item "><a href="/commercial">Commercial</a></li>-->
-            <li class="item "><a href="/about">Qui suis-je</a></li>
-            <li class="item "><a href="/contact">Contact</a></li>
+            <li class="item {% if request.resolver_match.url_name == "video" %}selected{% endif %}  " style="padding-top: 10px;"><a href="{% url "video" %}">Vidéos</a></li>
+            <li class="item {% if request.resolver_match.url_name == "about" %}selected{% endif %}  "><a href="{% url "about" %}">Qui suis-je</a></li>
+            <li class="item {% if request.resolver_match.url_name == "contact" %}selected{% endif %}  "><a href="{% url "contact" %}">Contact</a></li>
 
       </ul>
     </div>
