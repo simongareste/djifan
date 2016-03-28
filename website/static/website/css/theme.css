@@ -141,12 +141,12 @@ font-weight: normal;
 
 .menu_wrap ul li a {
   color: #000000;
-background: #000000;
-font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-font-size: 12px;
-font-style: normal;
-font-weight: normal;
-line-height: 1.7;
+  background: #000000;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.7;
   text-decoration: none;
   padding: 3px 6px 3px 1px;
 
@@ -159,7 +159,7 @@ line-height: 1.7;
   }
   .menu_wrap ul a:hover {
     background: #000000;
-color: #c4b48b;
+color: #A2C760;
 font-style: normal;
 font-weight: normal;
 
@@ -169,12 +169,11 @@ font-weight: normal;
   .menu_wrap ul a:focus,
   .menu_wrap ul .selected a {
     background: #000000;
-color: #c4b48b;
-font-style: normal;
-font-weight: normal;
-
-      background-color: transparent;
-
+    color: #A2C760;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: underline;
+    background-color: transparent;
   }
 
 .menu_wrap ul .item {
