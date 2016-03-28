@@ -1,10 +1,22 @@
-from envelope.forms import ContactForm
-from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Submit
+from django import forms
 
+class MyContactForm(forms.Form):
+    contact_name = forms.CharField(
+        required=True,
+        widget=forms.TextInput(attrs={'placeholder': 'Nom', 'class': 'form-control'})
+    )
+    contact_email = forms.EmailField(
+        required=True,
+        widget=forms.TextInput(attrs={'placeholder': 'Email', 'class': 'form-control'})
+    )
+    content = forms.CharField(
+        required=True,
+        widget=forms.Textarea(attrs={'placeholder': 'Message', 'class': 'form-control'})
+    )
 
-class MyContactForm(ContactForm):
     def __init__(self, *args, **kwargs):
         super(MyContactForm, self).__init__(*args, **kwargs)
-        self.helper = FormHelper()
-        self.helper.add_input(Submit('submit', 'Submit', css_class='btn-lg'))
+        # Empty the default labels
+        self.fields['contact_name'].label = ""
+        self.fields['contact_email'].label = ""
+        self.fields['content'].label = ""

@@ -374,7 +374,7 @@ background: #000000;
 
   min-height: 700px;
 
-  width: 223px; height: 100%;
+  width: 15%; height: 100%;
 
   position: fixed;
   top: 0;
@@ -1566,3 +1566,4 @@ Client Access Pages
     margin-right: 0 !important;
   }
 }
+

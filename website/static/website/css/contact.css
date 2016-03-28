@@ -1,0 +1,23 @@
+body {
+  background-image: url(/static/website/images/contact-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+}
+
+.btn.outline{
+  background: none;
+    color: #000000;
+}
+
+
+textarea, input, button{
+    background: #FFFFFF;
+    opacity: 0.8;
+}
+
+h1{
+    color: #A2C760;
+}

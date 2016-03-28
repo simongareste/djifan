@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block head %}
+  <link href="{% static 'website/css/bootstrap.css' %}" media="screen" rel="stylesheet" type="text/css">
+  <link href="{% static 'website/css/contact.css' %}" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-3">
+        <p>Votre message a bien été envoyé, je vous répondrai dès que possible.</p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

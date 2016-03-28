@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block head %}
+  <link href="{% static 'website/css/bootstrap.css' %}" media="screen" rel="stylesheet" type="text/css">
+  <link href="{% static 'website/css/contact.css' %}" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-3">
+
+        <h1>Me Contacter</h1>
+
+
+        <form role="form" action="{% url 'contact' %}" method="post" class="form contact">
+          {% csrf_token %}
+          {{ form.non_field_errors }}
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                {{ form.contact_name.errors }}
+                {{ form.contact_name }}
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                {{ form.contact_email.errors }}
+                {{ form.contact_email }}
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                {{ form.content.errors }}
+                {{ form.content }}
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary outline" type="submit">Submit</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

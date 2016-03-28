@@ -41,8 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'photologue',
     'sortedm2m',
-    'envelope',
-    'crispy_forms',
 ]
 
 MIDDLEWARE_CLASSES = [
