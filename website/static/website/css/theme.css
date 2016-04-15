@@ -37,9 +37,9 @@ html{
 body {
   line-height: 1;
   color: #555555;
-font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-font-size: 12px;
-font-weight: normal;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
   background: #ffffff;
 }
 
@@ -64,14 +64,14 @@ font-weight: normal;
 
 a {
   outline: none;
-  color: #00a1f9;
+  color: #A2C760;
 text-decoration: underline;
 font-style: normal;
 font-weight: normal;
   }
 
   a:hover {
-    color: #94cbff;
+    color: #7BA239;
 text-decoration: underline;
 font-style: normal;
     }

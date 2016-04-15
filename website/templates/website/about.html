@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block head %}
+  <link href="{% static 'website/css/bootstrap.min.css' %}" media="screen" rel="stylesheet" type="text/css"
+        xmlns="http://www.w3.org/1999/html">
+  <script src="{% static 'website/js/tether.min.js' %}" type="text/javascript"></script>
+  <script src="{% static 'website/js/bootstrap.min.js' %}" type="text/javascript"></script>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="container-fluid ">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-3 p-t-3">
+        <img src="{% static 'website/images/aboutw.jpg' %}" class="img-fluid">
+      </div>
+    </div>
+
+    <div class="row p-t-3">
+      <div class="col-md-8 col-md-offset-3">
+        Je suis Jifan, photographe professionnelle basée sur Grenoble, une belle ville entourée de montagnes. Je
+        travaille principalement sur quatre types de photos : mariage, portrait, gastronomie et immobilier.
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-3 ">
+        <div class="row p-t-3">
+          <div class="col-md-6">
+            <img src="{% static 'website/images/670A4587.jpg' %}" class="img-fluid">
+          </div>
+          <div class="col-md-6 text-center">
+            <p class=" font-weight-bold p-b-2">Reportage mariage</p>
+            <p>J'adore être photographe de mariage, je peux ainsi témoignere, partager et rendre éternel un des moments
+              les plus importants dans la vie d'un couple ! Le maquillage, l'habillage, la rencontre, les cérémonies,
+              le vin d'honneur, la fête, l'ambiance et la décoration... Je réalise toujours le reportage photo le plus
+              complet, qui rend votre mariage vraiment inoubliable !</p>
+          </div>
+        </div>
+        <div class="row p-t-3">
+          <div class="col-md-6">
+            <img src="{% static 'website/images/670A3146-nb.jpg' %}" class="img-fluid">
+          </div>
+          <div class="col-md-6">
+            <p class=" font-weight-bold p-b-2">Portrait</p>
+            <p>Je fais des portraits pour le cadre professionnel et personnel. Dans les deux cas, la séance de portrait
+              est souvent réservée aux occasions exceptionnelles, telles que la recherche d'un premier contrat, un
+              nouveau status professionnel, une naissance, des fiançailles... Je souhaite qu'une seule image raconte
+              toute une histoire, les sentiments que procurent le moment à la personne.</p>
+          </div>
+        </div>
+        <div class="row p-t-3">
+          <div class="col-md-6">
+            <img src="{% static 'website/images/670A5050.jpg' %}" class="img-fluid">
+          </div>
+          <div class="col-md-6">
+            <p class=" font-weight-bold p-b-2">Gastronomie</p>
+            <p>Je suis gourmande, j'adore la cuisine, et je suis photographe, toutes ces raisons m'ont fait devenir
+              photographe culinaire. La gastronomie est un art, je cherche à le montrer à travers mes images, et
+              j'aimerais qu'elles puissent transcrire visuellement le goût des chef-d'oeuvres.</p>
+          </div>
+        </div>
+        <div class="row p-t-3 p-b-3">
+          <div class="col-md-6">
+            <img src="{% static 'website/images/06.jpg' %}" class="img-fluid">
+          </div>
+          <div class="col-md-6">
+            <p class=" font-weight-bold p-b-2">Immobilier</p>
+            <p>Depuis 2015, je suis photographe partenaire avec Meero, une entreprise spécialisée dans la photographie
+              d'intérieur. Je fais des shootings pour des agences immobilières de tous types de biens (maisons,
+              appartements, bureaux, restaurants...). La qualité de ces photos permet de réellement mettre en valeur
+              les biens et d'attirer plus l'attention des acheteurs potentiels.</p>
+          </div>
+        </div>
+        <div class="row p-t-1 p-b-3">
+          <div class="col-md-12">
+            <p class="text-xs-center">Je suis toujours à l'écoute de nouveaux projets, n'hésitez donc pas à me <a href="{% url "contact" %}">contacter</a>!</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+{% endblock %}

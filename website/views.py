@@ -21,7 +21,7 @@ def videoView(request):
     return render(request, template_name, {})
 
 def aboutView(request):
-    template_name = 'website/index.html'
+    template_name = 'website/about.html'
     return render(request, template_name, {})
 
 def contactView(request):
