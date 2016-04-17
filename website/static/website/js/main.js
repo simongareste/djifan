@@ -139,7 +139,7 @@ function positionContent() {
     menu_height = $(".nav:visible").height();
   } else {
     image_height = (respUtils.fullHeightModeOrDevice()) ? availableHeight : $('body').attr('id').replace('imgsize_', '');
-    menu_height = parseInt(image_height, 10) + $('.social_icons').height() + parseInt($('.social_icons').css('margin-top').replace('px', ''), 10);
+    menu_height = parseInt(image_height, 10) ;
     if (!isDevice) {
       menu_height = menu_height + $('.nav_container').offset().top;
     }
@@ -169,7 +169,7 @@ function positionContent() {
   }
 
   if($(window).height() < menu_height + 10) {
-    var new_height = $(window).height() - $('.social_icons').height() - parseInt($('.social_icons').css('marginTop').replace('px', ''), 10) - 20;
+    var new_height = $(window).height()  - 20;
 
     // $('.nav').css('min-height', new_height);
     $('.nav_container').css({
@@ -178,7 +178,7 @@ function positionContent() {
       'top': ($('body').hasClass('listing') || $('body').hasClass('simple')) ? '0' : $('#content').offset().top
     });
 
-    $('#content .container').css('padding-bottom', $('.social_icons').height() + parseInt($('.social_icons').css('marginTop').replace('px', ''), 10) * 2);
+    $('#content .container').css('padding-bottom', 10);
     var menuWrapHeight = new_height - $('#logo').height() - parseInt($('#logo').css('marginTop'), 10) - parseInt($('#logo').css('marginBottom'), 10) - 10;
 
     initOrReinitjScrollPane($('.menu_wrap'), {
@@ -610,13 +610,13 @@ function setAssetsSize(all) {
 }
 
 function enable_scrolling() {
-  $('.container').mousewheel(function(event, delta, deltaX, deltaY) {
+  $('.container').on('mousewheel',function(event) {
     var d = 0, d2 = 0, m = 40;
-    if( Math.abs(deltaX) >= Math.abs(deltaY) ) {
-      d2 = -deltaX
+    if( Math.abs(event.deltaX) >= Math.abs(event.deltaY) ) {
+      d2 = -event.deltaX
     }
     else {
-      d2 = deltaY
+      d2 = event.deltaY
     }
     d = d2 * m;
     // if not in a text scrolling area we will scroll the appropriate amount
