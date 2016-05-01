@@ -9,11 +9,13 @@
     <script src="{% static 'website/js/bootstrap.min.js' %}" type="text/javascript"></script>
     <link href="{% static 'website/css/jquery.scrollpane.css' %}" foo="bar" media="screen" rel="stylesheet" type="text/css">
     <script src="{% static 'website/js/jquery.migrate.js' %}" type="text/javascript"></script>
+    <link href="{% static 'website/css/jquery.contextMenu.min.css' %}" foo="bar" media="screen" rel="stylesheet" type="text/css">
     <script src="{% static 'website/js/jquery.appear.js' %}" type="text/javascript"></script>
     <script src="{% static 'website/js/jquery.scrollpane.js' %}"></script>
     <script src="{% static 'website/js/jquery.mousewheel.js' %}"></script>
     <script src="{% static 'website/js/jquery.scrollDelta.js' %}"></script>
     <script src="{% static 'website/js/jquery.min.js' %}" type="text/javascript"></script>
+      <script src="{% static 'website/js/jquery.contextMenu.min.js' %}"></script>
     <script src="{% static 'website/js/format_identifier.js' %}" type="text/javascript"></script>
     <script src="{% static 'website/js/mobilemenu.js' %}" type="text/javascript"></script>
     <script src="{% static 'website/js/lazyload.js' %}" type="text/javascript"></script>
@@ -53,7 +55,28 @@
       <!-- CONTENT END -->
 
     </div>
+  <script type="text/javascript">
 
+        $.contextMenu({
+            selector: '.lazyimage',
+            callback: function(key, options) {
+                var m = "clicked: " + key;
+                //window.console && console.log(m) || alert(m);
+            },
+            items: {
+                "copyright": {name: "Copyright Jifan Photography, tous droits réservés", icon: ""},
+                //"sep1": "---------",
+                //"quit": {name: "Quit", icon: function(){
+                //    return 'context-menu-icon context-menu-icon-quit';
+                //}}
+            }
+        });
+
+        $('.context-menu-one').on('click', function(e){
+            console.log('clicked', this);
+        })
+
+  </script>
 
   <style type="text/css">
     b, strong { font-weight: bold; }
