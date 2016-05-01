@@ -1,5 +1,5 @@
 body {
-  background-image: url(/static/website/images/contact-bg.jpg);
+  background-image: url(../images/contact-bg.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -8,11 +8,21 @@ body {
 }
 
 .btn.outline{
-  background: none;
-    color: #000000;
+  /*background: none;*/
+    color: #A2C760;
 }
 
+.btn{
+    background: #fff;
+    opacity: 0.8;
+    border-color:#A2C760;
+}
 
+.btn:hover{
+    border-color:#A2C760;
+    background: #78A239;
+    color: #000000;
+}
 textarea, input, button{
     background: #FFFFFF;
     opacity: 0.8;
@@ -20,4 +30,15 @@ textarea, input, button{
 
 h1{
     color: #A2C760;
+}
+
+div.thanks  {
+    background: #ffffff;
+    opacity: 0.8;
+}
+
+div.thanks p {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    text-align: center;
 }
