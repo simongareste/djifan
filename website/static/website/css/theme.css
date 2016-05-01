@@ -154,6 +154,20 @@ font-weight: normal;
     background-color: rgba(0,0,0,0);
 
 }
+
+	ul.nav li.item {
+		margin-top: 2.5%;
+		margin-bottom: 2.5%;
+	}
+
+    ul.nav li.item.slogan {
+		margin-bottom: 10%;
+        font-size: 0.8em;
+	}
+
+    ul.nav li.item {
+		text-align: center;
+	}
   .menu_wrap ul li.nav_using a {
     text-decoration: underline;
   }
@@ -370,21 +384,39 @@ background: #000000;
 
 .nav {
   float: left;
-
   min-height: 700px;
-
-  width: 15%; height: 100%;
-
+  width: 15%;
+  height: 100%;
+  min-width: 120px;
   position: fixed;
-  top: 0;
-
+  padding-top: 8%;
   z-index: 999999;
-
-
-    left: 80px;
+  left: 8%;
 
 }
 
+.navbar-toggler{
+  z-index: 21000;
+}
+.navbar{
+  padding: 0;
+}
+
+ul.nav {
+  background-color: white;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+ul.nav li{
+  margin-left: 10%;
+}
+ul.nav li.logo img{
+  max-height: 80px;
+  padding-bottom: 1%;
+}
+
+/*
 .nav #overlay {
   background: #ffffff;
   position: absolute; top: 0; left: 0;
@@ -405,7 +437,12 @@ font-style: normal;
 font-weight: normal;
   padding: 16px 0 0 0;
 }
+*/
 
+.nav .nav_container{
+  z-index: 10;
+}
+/*
 .nav .nav_container {
   position: absolute;
   top: 50%;
@@ -415,7 +452,7 @@ font-weight: normal;
   text-align: left;
 
   /* This fixes IE7*/
-  *overflow:visible;
+ /* *overflow:visible;
 }
 .nav.left_aligned_menu { text-align: left;}
 .nav .menu_wrap {
@@ -444,14 +481,14 @@ font-weight: normal;
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
-}
-.navbar-toggle .icon-bar {
+}*/
+/*.navbar-toggle .icon-bar {
     display: block;
     width: 22px;
     height: 2px;
     border-radius: 1px;
-    background-color: #fc0 /* change this to any color you want! */;
-}
+    background-color: #fc0; /* change this to any color you want! */
+/*}*/
 /* Center Horizontal Vertically */
 .gallery #content {
 
@@ -753,10 +790,6 @@ body.listing#imgsize_fullbrowserheight #content { padding-top: 14px; }
 .gallery .cursor_white.cursor_l .ie-prev { background: url(http://bucket1.format-assets.com/theme_versions/1484521/assets/cursors/left/cursor_white_l.png) no-repeat; }
 
 
-/* Blog styling */
-.blog .nav {
-  z-index: 99999;
-}
 
 .f_blog_body_typography,
 .f_blog_body_typography:hover {
@@ -806,10 +839,6 @@ body.listing#imgsize_fullbrowserheight #content { padding-top: 14px; }
   font-size: 33px;
 }
 
-.mobile-menu-trigger {
-  display: none;
-}
-
 .youtube_cont.preview .load_iframe, .vimeo_cont.preview .load_iframe {
   background-image: url(http://bucket1.format-assets.com/theme_versions/1484521/assets/images/play.svg) !important;
   background-size: 63px 63px;
@@ -822,8 +851,8 @@ body.listing#imgsize_fullbrowserheight #content { padding-top: 14px; }
     overflow-y: auto;
   }
 
-  .nav_container > .social_icons {
-    display: block;
+  .navbar{
+    z-index: 5;
   }
 
   .gallery {
@@ -966,7 +995,7 @@ body.listing#imgsize_fullbrowserheight #content { padding-top: 14px; }
     height: auto;
     overflow-x: scroll;
     overflow-y: hidden;
-    padding-left: calc(223px + 2em);
+    /*padding-left: calc(223px + 2em);*/
   }
 
   .open-mobile-menu #content {
@@ -1096,12 +1125,6 @@ body.listing#imgsize_fullbrowserheight #content { padding-top: 14px; }
     max-width: none;
   }
 
-  #logo {
-    position: relative;
-    margin: 0;
-    padding: 20px 20px 30px 14px;
-  }
-
   .gallery .asset.image .img img[data-sizing='landscape'] {
     width: 85vw;
   }
@@ -1165,7 +1188,7 @@ body.listing#imgsize_fullbrowserheight #content { padding-top: 14px; }
     padding-left: 0;
   }
 
-  .nav {
+/*  .nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -1496,7 +1519,7 @@ body.listing#imgsize_fullbrowserheight #content { padding-top: 14px; }
 
   .open-mobile-menu .mobile-menu-trigger .ex {
     display: block;
-  }
+  }*/
 
   .gallery .asset:last-child {
     margin-right: 100px;
@@ -1504,13 +1527,12 @@ body.listing#imgsize_fullbrowserheight #content { padding-top: 14px; }
 }
 
 @media only screen and (max-width: 767px) and (orientation: landscape) {
-  .gallery .nav {
+  /*.gallery .nav {
     display: none;
-  }
+  }*/
 
-  .f_blog_wrapper iframe {
-    width: 100% !important;
-    min-height: 90vh !important;
+  .navbar{
+    z-index: 5;
   }
 }
 

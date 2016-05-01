@@ -43,7 +43,7 @@ $(document).ready(function(){
       $('.category').addClass('open_cat');
     }
 
-    $('.nav_container').css('overflow', 'visible');
+    $('.navbar').css('overflow', 'visible');
 
     $(window).load(function() {
       positionContent();
@@ -61,11 +61,11 @@ $(document).ready(function(){
 
   if (!$('body').hasClass('gallery')) {
     if (respUtils.tablet() && DATA.theme.gallery_image_height != 'Full Browser Height') {
-      $('#content, #content_page_outer').css('top', $(".nav_container:visible").position().top - 275);
+      $('#content, #content_page_outer').css('top', $(".navbar:visible").position().top - 275);
     }
 
     if (respUtils.mobile()) {
-      $('#content, #content_page_outer').css('top', $(".nav_container:visible").height());
+      $('#content, #content_page_outer').css('top', $(".navbar:visible").height());
     }
   }
 });
@@ -141,7 +141,7 @@ function positionContent() {
     image_height = (respUtils.fullHeightModeOrDevice()) ? availableHeight : $('body').attr('id').replace('imgsize_', '');
     menu_height = parseInt(image_height, 10) ;
     if (!isDevice) {
-      menu_height = menu_height + $('.nav_container').offset().top;
+      menu_height = menu_height + $('.navbar').offset().top;
     }
   }
 
@@ -164,15 +164,15 @@ function positionContent() {
   // Positioning listing and simple content
 
   if(!isDevice && ($('body').hasClass('listing') || $('body').hasClass('simple'))) {
-    $('#content').css('top', $('.nav_container').offset().top - $(window).scrollTop() + 'px');
-    $('body > .footer_text').css('top', $('.nav_container').offset().top - $(window).scrollTop() + 'px');
+    $('#content').css('top', $('.navbar').offset().top - $(window).scrollTop() + 'px');
+    $('body > .footer_text').css('top', $('.navbar').offset().top - $(window).scrollTop() + 'px');
   }
 
   if($(window).height() < menu_height + 10) {
     var new_height = $(window).height()  - 20;
 
     // $('.nav').css('min-height', new_height);
-    $('.nav_container').css({
+    $('.navbar').css({
       'height': new_height,
       'marginTop': '0',
       'top': ($('body').hasClass('listing') || $('body').hasClass('simple')) ? '0' : $('#content').offset().top
@@ -190,7 +190,7 @@ function positionContent() {
     var new_height = $(window).height() - $('.social_icons').height() - parseInt($('.social_icons').css('marginTop').replace('px', ''), 10) - 20;
 
     // $('.nav').css('min-height', new_height);
-    $('.nav_container').css({
+    $('.navbar').css({
       'height': new_height,
       'marginTop': '0'
     });
@@ -204,13 +204,13 @@ function positionContent() {
     });
 
     if (isDevice && DATA.theme.gallery_image_height === 'Full Browser Height') {
-      var menuWrapHeight = $(window).height() - $('#logo').outerHeight() - $('.nav_container > .social_icons').outerHeight() - 20;
+      var menuWrapHeight = $(window).height() - $('#logo').outerHeight() - $('.navbar > .social_icons').outerHeight() - 20;
       $('.menu_wrap').height(menuWrapHeight);
     }
 
   } else {
     $('.nav').css('min-height', '');
-    $('.nav_container').css({
+    $('.navbar').css({
       'height':'',
       'marginTop': '',
       'top': ''
@@ -219,9 +219,9 @@ function positionContent() {
 
     if (isDevice) {
       if (DATA.theme.gallery_image_height === 'Full Browser Height') {
-        var menuWrapHeight = $(window).height() - $('#logo').outerHeight() - $('.nav_container > .social_icons').outerHeight() - 20;
+        var menuWrapHeight = $(window).height() - $('#logo').outerHeight() - $('.navbar > .social_icons').outerHeight() - 20;
       } else {
-        var menuWrapHeight = 550 - $('#logo').outerHeight() - $('.nav_container > .social_icons').outerHeight();
+        var menuWrapHeight = 550 - $('#logo').outerHeight() - $('.navbar > .social_icons').outerHeight();
       }
       $('.menu_wrap').height(menuWrapHeight);
     } else {
@@ -293,6 +293,7 @@ function initGallery() {
       });
     } else {
       $('#content').bind('click', function(e){
+        //$('#content-container').bind('click', function(e){
         if(enough_assets) {
           if(!($(e.target).hasClass('image_text') || $(e.target).hasClass('image_text_container') || $(e.target).parents('.image_text_container').length === 1 || $(e.target).closest('a').length)) {
             if($(this).hasClass('cursor_left')) { activeSlideIndex -= 1; }
