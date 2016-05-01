@@ -15,6 +15,7 @@ urlpatterns = [
     url(r'^commercial$', website.views.indexView,{'category':'commercial'}, name='commercial' ),
     url(r'^portrait$', website.views.indexView,{'category':'portrait'}, name='portrait'),
     url(r'^newborn$', website.views.indexView,{'category':'newborn'}, name='newborn'),
+    url(r'^publicitaire', website.views.indexView,{'category':'pub'}, name='publicitaire'),
     url(r'^press$', website.views.indexView,{'category':'press'}, name='press'),
     url(r'^video$', website.views.videoView, name='video'),
     url(r'^about$', website.views.aboutView, name='about'),
