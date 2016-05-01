@@ -1,4 +1,4 @@
-window._4ORMAT = window._4ORMAT || {}, window._4ORMAT.importResponsiveUtilities = function() {
+window.DATA = window.DATA || {}, window.DATA.importResponsiveUtilities = function() {
     "use strict";
     var e = 767,
         i = 1024,
