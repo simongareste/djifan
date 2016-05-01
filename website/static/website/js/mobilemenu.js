@@ -1,4 +1,4 @@
-window._4ORMAT = window._4ORMAT || {}, window._4ORMAT.importMobileMenu = function() {
+window.DATA = window.DATA || {}, window.DATA.importMobileMenu = function() {
     "use strict";
     var n, e, o, i, t, l, s = 10,
         r = function() {

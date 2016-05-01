@@ -11,8 +11,8 @@ var ASPECT_RATIO_PORTRAIT = "portrait";
 var ASPECT_RATIO_LANDSCAPE = "landscape";
 var viewportWidth;
 
-var respUtils = window._4ORMAT.importResponsiveUtilities();
-var mobileMenu = window._4ORMAT.importMobileMenu();
+var respUtils = window.DATA.importResponsiveUtilities();
+var mobileMenu = window.DATA.importMobileMenu();
 
 $(document).ready(function(){
   mobileMenu.setup({
@@ -337,7 +337,7 @@ function initGallery() {
   }
 
   if( !isDevice && DATA.theme.gallery_image_height != 'Full Browser Height'){
-    _4ORMAT.Lazyload.add('.asset img', {
+    DATA.Lazyload.add('.asset img', {
       priority: 10,
       beforeShow: function(img) {
         $(img).css({opacity: 0});
@@ -358,7 +358,7 @@ function initGallery() {
         }, 5);
       }
     });
-    _4ORMAT.Lazyload.init();
+    DATA.Lazyload.init();
   }
 
   $('.asset img').load(function(){
@@ -399,10 +399,10 @@ function initGallery() {
 };
 
 function initListing() {
-  _4ORMAT.Lazyload.add('.asset .img img', {
+  DATA.Lazyload.add('.asset .img img', {
      complete: function(img){ img.animate({opacity: 1.0}, 1000); }
    });
-  _4ORMAT.Lazyload.init();
+  DATA.Lazyload.init();
 };
 
 function initClient() {
@@ -449,7 +449,7 @@ function setFullBrowserHeight (){
       }
     });
 
-    _4ORMAT.Lazyload.add('.asset img', {
+    DATA.Lazyload.add('.asset img', {
       priority: 10,
       beforeShow: function(img) {
         $(img).css({opacity: 0});
@@ -478,7 +478,7 @@ function setFullBrowserHeight (){
       }
     });
 
-    _4ORMAT.Lazyload.init();
+    DATA.Lazyload.init();
   }
 }
 
