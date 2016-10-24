@@ -14,3 +14,5 @@ tests/report/
 venv/
 djifan/local_settings.py
 website/static/website/images/medias/
+.idea/*
+static/*
