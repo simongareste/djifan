@@ -622,10 +622,15 @@ function enable_scrolling() {
     d = d2 * m;
     // if not in a text scrolling area we will scroll the appropriate amount
     if(!$(event.target).parents(".jspScrollable").length) {
-      if($.browser.mozilla || $.browser.msie) {
-        $('html')[0].scrollLeft -= d;
-      } else {
-        $('body')[0].scrollLeft -= d;
+      if( $(window).width() <= 1024 ){
+        $('#content')[0].scrollLeft -= d;
+      }
+      else {
+        if($.browser.mozilla || $.browser.msie) {
+          $('html')[0].scrollLeft -= d;
+        } else {
+          $('body')[0].scrollLeft -= d;
+        }
       }
       return false;
     }
