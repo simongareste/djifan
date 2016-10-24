@@ -53,14 +53,14 @@
       <ul class="nav navbar-nav">
                 <li class="item logo"><a href="/"><img src="{% static 'website/images/logo.png' %}"></a></li>
                 <li class="item slogan">Votre photographe professionnel à Grenoble</li>
-                <li class="item {% if request.resolver_match.url_name == "index" %}active selected{% endif %}"><a href="{% url "index" %}">Mariages</a></li>
-                <li class="item {% if request.resolver_match.url_name == "portrait" %}active selected{% endif %} "><a href="{% url "portrait" %}">Portrait</a></li>
-                <li class="item {% if request.resolver_match.url_name == "newborn" %}active selected{% endif %}  "><a href="{% url "newborn" %}">Nouveaux-nés</a></li>
-                <li class="item {% if request.resolver_match.url_name == "publicitaire" %}active selected{% endif %}  "><a href="{% url "publicitaire" %}">Publicitaire</a></li>
+                <li class="item {% if request.resolver_match.url_name == 'index' %}active selected{% endif %}"><a href="{% url 'index' %}">Mariages</a></li>
+                <li class="item {% if request.resolver_match.url_name == 'portrait' %}active selected{% endif %} "><a href="{% url 'portrait' %}">Portrait</a></li>
+                <li class="item {% if request.resolver_match.url_name == 'newborn' %}active selected{% endif %}  "><a href="{% url 'newborn' %}">Nouveaux-nés</a></li>
+                <li class="item {% if request.resolver_match.url_name == 'publicitaire' %}active selected{% endif %}  "><a href="{% url 'publicitaire' %}">Publicitaire</a></li>
 
                 <!--<li class="item {% if request.resolver_match.url_name == "video" %}active selected{% endif %}  " style="padding-top: 10px;"><a href="{% url "video" %}">Vidéos</a></li>-->
-                <li class="item {% if request.resolver_match.url_name == "about" %}active selected{% endif %}  " style="padding-top: 10px;"><a href="{% url "about" %}">Qui suis-je</a></li>
-                <li class="item {% if request.resolver_match.url_name == "contact" %}active selected{% endif %}  "><a href="{% url "contact" %}">Contact</a></li>
+                <li class="item {% if request.resolver_match.url_name == 'about' %}active selected{% endif %}  " style="padding-top: 10px;"><a href="{% url 'about' %}">Qui suis-je</a></li>
+                <li class="item {% if request.resolver_match.url_name == 'contact' %}active selected{% endif %}  "><a href="{% url 'contact' %}">Contact</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
 
