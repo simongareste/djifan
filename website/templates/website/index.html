@@ -3,23 +3,37 @@
 
 
 {% block head %}
+<script>
+  window.WEBSITE_LIB = window.WEBSITE_LIB || {};
+</script>
+
     <link href="{% static 'website/css/bootstrap.min.css' %}" media="screen" rel="stylesheet" type="text/css"
         xmlns="http://www.w3.org/1999/html">
+
     <script src="{% static 'website/js/tether.min.js' %}" type="text/javascript"></script>
     <script src="{% static 'website/js/bootstrap.min.js' %}" type="text/javascript"></script>
     <link href="{% static 'website/css/jquery.scrollpane.css' %}" foo="bar" media="screen" rel="stylesheet" type="text/css">
     <link href="{% static 'website/css/jquery.contextMenu.min.css' %}" foo="bar" media="screen" rel="stylesheet" type="text/css">
+
+    <script src="{% static 'website/js/lazyload.js' %}" type="text/javascript"></script>
+    <script src="{% static 'website/js/jquery.scrollpane.js' %}" type="text/javascript"></script>
+    <script src="{% static 'website/js/jquery.mousewheel.js' %}" type="text/javascript"></script>
     <script src="{% static 'website/js/jquery.appear.js' %}" type="text/javascript"></script>
-    <script src="{% static 'website/js/jquery.scrollpane.js' %}"></script>
-    <script src="{% static 'website/js/jquery.mousewheel.js' %}"></script>
-    <script src="{% static 'website/js/jquery.scrollDelta.js' %}"></script>
-    <script src="{% static 'website/js/jquery.min.js' %}" type="text/javascript"></script>
-    <script src="{% static 'website/js/jquery.contextMenu.min.js' %}"></script>
+
+<!--<script src="{% static 'website/js/jquery.min.js' %}" type="text/javascript"></script>-->
+
+
+
+
+    <script src="{% static 'website/js/jquery.scrollDelta.js' %}" type="text/javascript"></script>
+
+    <script src="{% static 'website/js/jquery.contextMenu.min.js' %}" type="text/javascript"></script>
     <script src="{% static 'website/js/jquery.migrate.js' %}" type="text/javascript"></script>
     <script src="{% static 'website/js/format_identifier.js' %}" type="text/javascript"></script>
     <script src="{% static 'website/js/mobilemenu.js' %}" type="text/javascript"></script>
-    <script src="{% static 'website/js/lazyload.js' %}" type="text/javascript"></script>
+
     <script src="{% static 'website/js/main.js' %}" type="text/javascript"></script>
+    <script src="{% static 'website/js/lazysizes.js' %}" type="text/javascript"></script>
     <link href="{% static 'website/css/theme.css' %}" media="screen" rel="stylesheet" type="text/css">
 {% endblock %}
 
@@ -56,28 +70,7 @@
       <!-- CONTENT END -->
 
     </div>
-  <script type="text/javascript">
 
-        $.contextMenu({
-            selector: '.lazyimage',
-            callback: function(key, options) {
-                var m = "clicked: " + key;
-                //window.console && console.log(m) || alert(m);
-            },
-            items: {
-                "copyright": {name: "Copyright Jifan Photography, tous droits réservés", icon: ""},
-                //"sep1": "---------",
-                //"quit": {name: "Quit", icon: function(){
-                //    return 'context-menu-icon context-menu-icon-quit';
-                //}}
-            }
-        });
-
-        $('.context-menu-one').on('click', function(e){
-            console.log('clicked', this);
-        })
-
-  </script>
 
   <style type="text/css">
     b, strong { font-weight: bold; }
@@ -148,13 +141,13 @@
     font-size: 11px;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+     -webkit-border-radius: 4px;
     border-radius: 4px;
     background: #fff;
     box-shadow: 0 0 5px #222;
-    -webkit-box-shadow: 0 0 5px #222;
-    -moz-box-shadow: 0 0 5px #222;
+     -webkit-box-shadow: 0 0 5px #222;
+     -moz-box-shadow: 0 0 5px #222;
     box-shadow: 0 0 5px #222
   }
 </style>
@@ -165,11 +158,7 @@
 </script>
 
 <!--<script src="https://static0.format-assets.com/static/theme_api/v1/4ormat-b2a281bf412c1e982414a3bb51f2ece8ff436bf93c673c10f048fe739b61c361.js" type="text/javascript"></script>-->
-<script src="{% static 'website/js/lazyload.js' %}" />
 
-
-  {% load staticfiles %}
-  <script src="{% static 'website/js/jquery.scrollpane.js' %}"></script>
 
 
 
