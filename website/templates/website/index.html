@@ -5,10 +5,13 @@
 {% block head %}
 <script>
   window.WEBSITE_LIB = window.WEBSITE_LIB || {};
+  //<![CDATA[
+  var WEBSITE_CONF = {"theme":{"nav_arrows_toggle":true}};
+  //]]>
 </script>
 
-    <link href="{% static 'website/css/bootstrap.min.css' %}" media="screen" rel="stylesheet" type="text/css"
-        xmlns="http://www.w3.org/1999/html">
+    <!--<link href="{% static 'website/css/bootstrap.min.css' %}" media="screen" rel="stylesheet" type="text/css"
+        xmlns="http://www.w3.org/1999/html">-->
 
     <script src="{% static 'website/js/tether.min.js' %}" type="text/javascript"></script>
     <script src="{% static 'website/js/bootstrap.min.js' %}" type="text/javascript"></script>
@@ -152,10 +155,7 @@
   }
 </style>
 
-<script type="text/javascript">
-  //<![CDATA[
-  //]]>
-</script>
+
 
 <!--<script src="https://static0.format-assets.com/static/theme_api/v1/4ormat-b2a281bf412c1e982414a3bb51f2ece8ff436bf93c673c10f048fe739b61c361.js" type="text/javascript"></script>-->
 
