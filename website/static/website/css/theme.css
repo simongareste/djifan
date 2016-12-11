@@ -465,14 +465,6 @@ font-weight: normal;
     cursor: url(/static/images/right-arrow-32.png), w-resize;
 }
 
-.hidden-sm-up{
-    display: none !important;
-}
-
-.nav{
-    list-style: none;
-}
-
 .gallery #content .container {
   position: absolute;
   top: 50%;
